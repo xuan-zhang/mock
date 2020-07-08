@@ -5,7 +5,7 @@ export default {
   _randomDate(min?: Date, max?: Date) { // min, max
     min = min === undefined ? new Date(0) : min
     max = max === undefined ? new Date() : max
-    return new Date(Math.random() * (max.getTime() - min.getTime()))
+    return new Date(Math.random() * (max.getTime() - min.getTime()) + min.getTime())
   },
   _isTime(time?: unknown) {
     let tTime: Date
