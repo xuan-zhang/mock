@@ -1,0 +1,3 @@
+# mock
+
+## mockjs for Deno
