@@ -6,7 +6,7 @@ import name from './src/name.ts'
 import text from './src/text.ts'
 import web from './src/web.ts'
 
-export default {
+export {
   address,
   basic,
   date,
@@ -14,4 +14,14 @@ export default {
   name,
   text,
   web
+}
+
+export default {
+  ...address,
+  ...basic,
+  ...date,
+  ...misc,
+  ...name,
+  ...text,
+  ...web
 }
