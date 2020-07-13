@@ -1,5 +1,5 @@
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { date } from "../mod.ts";
+import { date, misc } from "../mod.ts";
 
 const { test } = Deno;
 
@@ -12,3 +12,15 @@ test("date.dateRange", () => {
     assertEquals(time > "1987-01-01" && time < '2003-01-01', true);
   }
 });
+
+test('pickOne', () => {
+  for(let i = 0; i < 5; i++) {
+    const a = misc.pickOne('a', 'b', 'c')
+    assertEquals(a == 'a' || a == 'b' || a == 'c', true);
+  }
+
+  for(let i = 0; i < 5; i++) {
+    const a = misc.pickOne(['a', 'b', 'c'])
+    assertEquals(a == 'a' || a == 'b' || a == 'c', true);
+  }
+})

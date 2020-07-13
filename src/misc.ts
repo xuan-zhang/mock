@@ -155,4 +155,5 @@ export default {
       (real ? Basic.natural(0, 9999).toString().padStart(4, "0") : "*****") +
       Basic.natural(0, 9999).toString().padStart(4, "0");
   },
+  pickOne: Helper.pick,
 };
