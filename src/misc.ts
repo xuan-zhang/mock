@@ -67,7 +67,7 @@ export default {
 	        地址码 6 + 出生日期码 8 + 顺序码 3 + 校验码 1
 	    [《中华人民共和国行政区划代码》国家标准(GB/T2260)](http://zhidao.baidu.com/question/1954561.html)
 	*/
-  id() {
+  identityNumber() {
     let id,
       sum = 0,
       rank = [
