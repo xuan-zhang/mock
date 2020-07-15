@@ -23,4 +23,8 @@ test('pickOne', () => {
     const a = misc.pickOne(['a', 'b', 'c'])
     assertEquals(a == 'a' || a == 'b' || a == 'c', true);
   }
+  for(let i = 0; i < 100; i++) {
+    const a = misc.pickOne(1,3);
+    assertEquals(a === 1 || a === 3, true)
+  }
 })
