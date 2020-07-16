@@ -131,26 +131,26 @@ export default {
   phone(real?: boolean) {
     // 13[0-9], 14[5,6,7,8,9], 15[0-3, 5-9], 16[2,5,6,7], 17[0-8], 18[0-9], 19[0-3, 5-9]
     let s = Helper.pick(["13", "14", "15", "16", "17", "18", "19"]);
-    const e = Basic.natural(0, 999999999);
     switch (s) {
-      case 13:
-      case 18:
+      case '13':
+      case '18':
         s += Basic.natural(0, 9);
         break;
-      case 14:
+      case '14':
         s += Helper.pick([4, 5, 6, 7, 8, 9]);
         break;
-      case 15:
-      case 19:
+      case '15':
+      case '19':
         s += Helper.pick([0, 1, 2, 3, 5, 6, 7, 8, 9]);
         break;
-      case 16:
+      case '16':
         s += Helper.pick(2, 5, 6, 7);
         break;
-      case 17:
+      case '17':
         s += Basic.natural(0, 8);
         break;
     }
+
     return s +=
       (real ? Basic.natural(0, 9999).toString().padStart(4, "0") : "*****") +
       Basic.natural(0, 9999).toString().padStart(4, "0");
